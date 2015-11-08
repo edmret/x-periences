@@ -6,29 +6,35 @@ var images = [
   "http://www.lifeofpix.com/wp-content/uploads/2015/11/Life-of-Pix-free-stock-photos-river-forest-sunset-AidaSadzak.jpg"
 ];
 
-Meteor.defer(function(){
-    
-    /**
-     * executes 
-     */
-    function checkComponentHandler(){
-        
-        console.log(typeof componentHandler);
-        
-        if(typeof componentHandler != "undefined"){
-            
-            setTimeout(function(){
-                componentHandler.upgradeDom();
-            },5);
-            
-        }else{
-            //update material design bindings
-            setTimeout(checkComponentHandler,5);
-        }
+
+
+/**
+ * executes 
+ */
+function checkComponentHandler(){
+
+    if(typeof componentHandler != "undefined"){
+
+        componentHandler.upgradeDom();
+
+    }else{
+        //update material design bindings
+        setTimeout(checkComponentHandler,10);
     }
-    
-    checkComponentHandler();
-    
+}
+
+// make sure this code is executed after all your templates have been defined
+Meteor.startup(function(){
+  for(var property in Template){
+    // check if the property is actually a blaze template
+    if(Blaze.isTemplate(Template[property])){
+      var template=Template[property];
+      // assign the template an onRendered callback who simply prints the view name
+      template.onRendered(function(){
+        checkComponentHandler();
+      });
+    }
+  }
 });
 
 
