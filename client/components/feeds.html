@@ -4,12 +4,6 @@
 	{{ > cover_search}}
 	<div class="feeds">
 		<div class="feeds-toolbar">
-			<!--[BUSCADOR]-->
-			<div class="mdl-textfield mdl-js-textfield">
-				<input class="mdl-textfield__input search" type="text" id="sample1">
-				<label class="mdl-textfield__label" for="sample1">Buscar</label>
-			</div>
-			<!--[/BUSCADOR]-->
 			<select class="categories">
 				<option value="">Seleccionar categoria</option>
 				{{#each categoryList }}
@@ -18,8 +12,8 @@
 			</select>
 			<select class="moods">
 				<option value="">Seleccionar sentimiento</option>
-				{{#each categoryList }}
-				<option value='{{ _id }}'>{{name}}</option>
+				{{#each feelingList }}
+				<option value='{{ _id }}'>{{name_es}}</option>
 				{{/each}}
 			</select>
 		</div>
@@ -37,5 +31,8 @@
 			</div>
 		</div>
 		{{/each}}
+		<div class="no-matches">
+			<h1>No se encontraron resultados! :(</h1>
+		</div>
 	</div>
 </template>
