@@ -5,7 +5,10 @@
 }
 .feeds-toolbar
 {
-	border: 0 !important;
+	display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 5px auto !important;
 }
 
 *
