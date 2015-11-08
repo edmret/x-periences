@@ -1,6 +1,8 @@
 # x-periences
 a hackathon project 2015
 
+http://i.imgur.com/GbO7Cmj.png
+
 Experiencias
 
 Una plataforma donde cualquiera puede compartir experiencias positivas o negativas y además tener la posibilidad de poder valorarlas, visualizarlas, filtrarlas por categoría/tags/valoración. las experiencias se procura no sean tan relacionadas a un lugar (marca) o persona en específico.
