@@ -1,49 +1,61 @@
 <template name="new_post">
-    <div class="mdl-layout">
-        <form id="exp_form" class="new-post-container mdl-js-ripple-effect" data-enum="">
-            <div class="new-post-header ">
-                <img src="{{userPicture}}" alt="User Image">
-                <label>
-                    <h4>Nueva Experiencia</h4>
-                </label>
+    <div class="post-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <div class="post-ribbon"></div>
+      <main class="post-main mdl-layout__content">
+        <div class="post-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 
-            </div>
-            <div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <input class="mdl-textfield__input" type="text" id="exp_title"/>
-                <label class="mdl-textfield__label" for="exp_title">Título de tu experiencia</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <textarea class="mdl-textfield__input" type="text" id="exp_description" rows="6"></textarea>
-                <label class="mdl-textfield__label" for="exp_description">Describe tu experiencia</label>
-              </div>
-            </div>
-            <div>
-            {{#each feelingList}}
-              <span id="feel{{name}}" data-enum="{{enum}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent exp_feel feel-{{name }}">{{name_es}}</span>
-            {{/each}}
-            </div>
-            <br />
-            <div class="line-flex">
-                <select name="" id="exp_category" class="form-control">
-                    <option value="">[Selecciona una categoría]</option>
-                    {{#each categoryList }}
-                      <option value='{{ _id }}'>{{name}}</option>
+              <form id="exp_form" class="new-post-container mdl-js-ripple-effect" data-enum="">
+                  <div class="new-post-header ">
+                      <img src="{{userPicture}}" alt="User Image">
+                      <label>
+                          <h4>Nueva Experiencia</h4>
+                      </label>
+
+                  </div>
+                  <div>
+                    <div class="mdl-textfield mdl-js-textfield line">
+                      <input class="mdl-textfield__input" type="text" id="exp_title"/>
+                      <label class="mdl-textfield__label" for="exp_title">Título de tu experiencia</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield line">
+                      <textarea class="mdl-textfield__input" type="text" id="exp_description" rows="6"></textarea>
+                      <label class="mdl-textfield__label" for="exp_description">Describe tu experiencia</label>
+                    </div>
+                  </div>
+                  <div class="ac">
+                    {{#each feelingList}}
+                      <span id="feel{{name}}" data-enum="{{enum}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent exp_feel feel-{{name }}">{{name_es}}</span>
                     {{/each}}
-                </select>
-            </div>
-            <br />
-            <div class="line-flex">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="exp_annon">
-                  <input type="checkbox" id="exp_annon" class="mdl-checkbox__input" checked/>
-                  <span class="mdl-checkbox__label">Publicar como anónimo</span>
-                </label>
-                <button id="exp_create" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                  Crear
-                </button>
-            </div>
+                  </div>
+                  <br />
+                  <div class="line-flex">
+                      <select name="" id="exp_category"  class="form-control">
+                          <option value="">[Selecciona una categoría]</option>
+                          {{#each categoryList }}
+                            <option value='{{ _id }}'>{{name}}</option>
+                          {{/each}}
+                      </select>
+                  </div>
+                  <br />
+                  <div class="line-flex">
+                      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="exp_annon">
+                        <input type="checkbox" id="exp_annon" class="mdl-checkbox__input" checked/>
+                        <span class="mdl-checkbox__label">Publicar como anónimo</span>
+                      </label>
+                      <button id="exp_create" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        Crear
+                      </button>
+                  </div>
 
-        </form>
+              </form>
+
+
+          </div>
+        </div>
+      </main>
     </div>
+
 
 </template>
