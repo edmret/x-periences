@@ -1,39 +1,46 @@
 <template name="profile">
-    <div class="mdl-layout">
-        <div class="profile-header">
-            <div class="profile-header-img">
-                <img src="{{profile.picture}}" alt="User Image">
-            </div>
-            <div class="profile-header-info">
-                <h1>{{profile.name}}</h1>
-                <div class="profile-social">
-                    <label>{{profile.birthdate}}</label>
-                    <a href=""><i class="fa fa-facebook-official fa-lg"></i></a>
-                    <a href=""><i class="fa fa-twitter fa-lg"></i></a>
-                    <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a href=""><i class="fa fa-instagram fa-lg"></i></a>
+    <div class="post-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <div class="post-ribbon feeling-0"></div>
+      <main class="post-main mdl-layout__content">
+        <div class="post-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="show-post-header mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col">
+                    <a href="/profile"><img src="{{profile.picture}}" alt="User Image"></a>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col"><a href="/profile">{{profile.name}}</a></div>
+                <div class="mdl-cell mdl-cell--6-col ac">
+                    <div class="profile-social">
+                        <label>{{profile.birthdate}}</label>
+                        <a href=""><i class="fa fa-facebook-official fa-lg"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
+            <div class="show-bottom-bar mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col">
+                    {{#each experiences}}
+                        {{> experience_resume }}
+                    {{/each}}
+                </div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    <h3>42 Badges</h3>
+                    
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>First timer</p>
+                    </div>
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>You're liking it</p>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
-        <div class="profile-body">
-            <div class="left-side">
-                
-                {{#each experiences}}
-                    {{> experience_resume }}
-                {{/each}}
-            </div>
-            <div class="right-side">
-                <h3>42 Badges</h3>
-                
-                <div class="badge">
-                    <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                    <p>First timer</p>
-                </div>
-                <div class="badge">
-                    <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                    <p>You're liking it</p>
-                </div>
-            </div>
-        </div>
+      </main>
     </div>
 </template>
