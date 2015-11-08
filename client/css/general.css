@@ -20,9 +20,3 @@
 {
 	margin-left: 10px;
 }
-
-select.categories, select.moods
-{
-	width: 50%;
-	display: flex;
-}
