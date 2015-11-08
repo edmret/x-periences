@@ -7,9 +7,9 @@
           <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
         	<div class="show-post-header mdl-grid">
 	          	<div class="mdl-cell mdl-cell--2-col">
-	          		<a href="/profile"><img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image"></a>
+	          		<a href="/profile/{{user._id}}"><img src="{{user.picture}}" alt="User Image"></a>
 	          	</div>
-	          	<div class="mdl-cell mdl-cell--8-col"><a href="/profile">User name</a></div>
+	          	<div class="mdl-cell mdl-cell--8-col"><a href="/profile/{{user._id}}">{{user.name}}</a></div>
 	          	<div class="mdl-cell mdl-cell--1-col ac"><i class="material-icons">flight</i></div>
 	          	<div class="mdl-cell mdl-cell--1-col ac"><i class="material-icons">mood</i></div>
           	</div>
