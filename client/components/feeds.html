@@ -31,41 +31,19 @@
 				<li class="mdl-menu__item">Clasificación 5</li>
 			</ul>
 		</div>
-        <div class="new-post-container">
-            <div class="new-post-header">
-                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
-                <label>
-                    <h4>Nombre Usuario</h4>
-                </label>
-            </div>
-            <div>
-              <h1>Título de tu experiencia</h1>
-              <p>Describe tu experiencia</p>
-            </div>
-        </div>
-        <div class="new-post-container">
-            <div class="new-post-header">
-                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
-                <label>
-                    <h4>Nombre Usuario</h4>
-                </label>
-            </div>
-            <div>
-              <h1>Título de tu experiencia</h1>
-              <p>Describe tu experiencia</p>
-            </div>
-        </div>
-        <div class="new-post-container">
-            <div class="new-post-header">
-                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
-                <label>
-                    <h4>Nombre Usuario</h4>
-                </label>
-            </div>
-            <div>
-              <h1>Título de tu experiencia</h1>
-              <p>Describe tu experiencia</p>
-            </div>
-        </div>
+		{{#each feedList}}
+      <div class="new-post-container">
+          <div class="new-post-header">
+              <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
+              <label>
+                  <h4>{{UserId}}</h4>
+              </label>
+          </div>
+          <div>
+            <h1>{{Title}}</h1>
+            <p>{{Description}}</p>
+          </div>
+      </div>
+		{{/each}}
 	</div>
 </template>
