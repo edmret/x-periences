@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 accounts-facebook
 accounts-twitter
 accounts-ui
+iron:router
+twbs:bootstrap
