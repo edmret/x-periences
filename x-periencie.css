@@ -11,10 +11,11 @@
 .cover-search input{
 	width: 80%;
 	display: block;
-	border-radius: 16px;
+	border-radius: 8px;
 	margin: 0 auto;
 	height: 64px;
-	border: 2px solid #CCC;
+	border: 4px solid #FF4081;
+	color: #FF4081;
 	text-align: center;
 	font-size: 32px;
 	background-color: rgba(255,255,255,0.87);
