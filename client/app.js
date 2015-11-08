@@ -6,19 +6,25 @@ var images = [
   "http://www.lifeofpix.com/wp-content/uploads/2015/11/Life-of-Pix-free-stock-photos-river-forest-sunset-AidaSadzak.jpg"
 ];
 
-$(document).on("ready", function(){
+Meteor.defer(function(){
     
     /**
     * The cover search element
     * @type {HTMLElement}
     */
-   var coverSearch = document.getElementById("cover-search");
+    var coverSearch = document.getElementById("cover-search");
     
     if(!!coverSearch ){
       coverSearch.addEventListener("animationiteration", changeBackgroundImage, false);
       coverSearch.addEventListener("MSAnimationIteration", changeBackgroundImage, false);
       coverSearch.addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
     }
+    
+    //update material design bindings
+    setTimeout(function(){
+        componentHandler.upgradeDom();
+    },1);
+    
 });
 
 function changeBackgroundImage(){
