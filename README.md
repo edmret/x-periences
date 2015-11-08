@@ -1,7 +1,7 @@
 # x-periences
 a hackathon project 2015
 
-http://i.imgur.com/GbO7Cmj.png
+<blockquote class="imgur-embed-pub" lang="en" data-id="GbO7Cmj"><a href="//imgur.com/GbO7Cmj">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 Experiencias
 
