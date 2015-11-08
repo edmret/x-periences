@@ -1,0 +1,30 @@
+.exp_feel
+{
+  margin-bottom: 5px;
+}
+.feel-Fear {
+  background-color: #4CAF50 !important;
+}
+.feel-Trust {
+  background-color: #CDDC39 !important;
+  color: #424242 !important;
+}
+.feel-Joy {
+  background-color: #FFEB3B !important;
+  color: #424242 !important;
+}
+.feel-Anticipation {
+  background-color: #FF9800 !important;
+}
+.feel-Anger {
+  background-color: #FF5722 !important;
+}
+.feel-Disgust {
+  background-color: #9C27B0 !important;
+}
+.feel-Sadness {
+  background-color: #3F51B5 !important;
+}
+.feel-Surprise {
+  background-color: #03A9F4 !important;
+}

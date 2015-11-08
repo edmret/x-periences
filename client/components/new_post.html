@@ -1,7 +1,7 @@
 <template name="new_post">
     <div class="mdl-layout">
-        <form class="new-post-container" >
-            <div class="new-post-header">
+        <form id="exp_form" class="new-post-container mdl-js-ripple-effect" data-enum="">
+            <div class="new-post-header ">
                 <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
                 <label>
                     <h4>Nueva Experiencia</h4>
@@ -11,22 +11,17 @@
             <div>
               <div class="mdl-textfield mdl-js-textfield line">
                 <input class="mdl-textfield__input" type="text" id="exp_title"/>
-                <label class="mdl-textfield__label" for="sample1">Título de tu experiencia</label>
+                <label class="mdl-textfield__label" for="exp_title">Título de tu experiencia</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield line">
                 <textarea class="mdl-textfield__input" type="text" id="exp_description" rows="6"></textarea>
-                <label class="mdl-textfield__label" for="sample1">Describe tu experiencia</label>
+                <label class="mdl-textfield__label" for="exp_description">Describe tu experiencia</label>
               </div>
             </div>
             <div>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-joy">Alegría</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-trust">Confianza</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-fear">Miedo</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-surprise">Sorpresa</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-sadness">Tristeza</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-disgust">Aversión</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-anger">Ira</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent feel-anticipation">Anticipación</button>
+            {{#each feelingList}}
+              <span id="feel{{name}}" data-enum="{{enum}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent exp_feel feel-{{name }}">{{name_es}}</span>
+            {{/each}}
             </div>
             <br />
             <div class="line-flex">
@@ -39,44 +34,16 @@
             </div>
             <br />
             <div class="line-flex">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="exp_annon">
                   <input type="checkbox" id="exp_annon" class="mdl-checkbox__input" checked/>
                   <span class="mdl-checkbox__label">Publicar como anónimo</span>
                 </label>
-                <button id="exp_create" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-                  <i class="material-icons">add</i>
+                <button id="exp_create" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Crear
                 </button>
             </div>
 
         </form>
     </div>
 
-    <style>
-      .feel-fear {
-        background-color: #4CAF50 !important;
-      }
-      .feel-trust {
-        background-color: #CDDC39 !important;
-        color: #424242 !important;
-      }
-      .feel-joy {
-        background-color: #FFEB3B !important;
-        color: #424242 !important;
-      }
-      .feel-anticipation {
-        background-color: #FF9800 !important;
-      }
-      .feel-anger {
-        background-color: #FF5722 !important;
-      }
-      .feel-disgust {
-        background-color: #9C27B0 !important;
-      }
-      .feel-sadness {
-        background-color: #3F51B5 !important;
-      }
-      .feel-surprise {
-        background-color: #03A9F4 !important;
-      }
-    </style>
 </template>
