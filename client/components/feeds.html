@@ -10,29 +10,21 @@
 				<label class="mdl-textfield__label" for="sample1">Buscar</label>
 			</div>
 			<!--[/BUSCADOR]-->
-			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="clasifications">
-				<i class="material-icons">class</i>
-			</button>
-			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="clasifications">
-				<li class="mdl-menu__item">Clasificación 1</li>
-				<li class="mdl-menu__item">Clasificación 2</li>
-				<li class="mdl-menu__item">Clasificación 3</li>
-				<li class="mdl-menu__item">Clasificación 4</li>
-				<li class="mdl-menu__item">Clasificación 5</li>
-			</ul>
-			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="moods">
-				<i class="material-icons">mood</i>
-			</button>
-			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="moods">
-				<li class="mdl-menu__item">Sentimiento 1</li>
-				<li class="mdl-menu__item">Clasificación 2</li>
-				<li class="mdl-menu__item">Clasificación 3</li>
-				<li class="mdl-menu__item">Clasificación 4</li>
-				<li class="mdl-menu__item">Clasificación 5</li>
-			</ul>
+			<select class="categories">
+				<option value="">Seleccionar categoria</option>
+				{{#each categoryList }}
+				<option value='{{ _id }}'>{{name}}</option>
+				{{/each}}
+			</select>
+			<select class="moods">
+				<option value="">Seleccionar sentimiento</option>
+				{{#each categoryList }}
+				<option value='{{ _id }}'>{{name}}</option>
+				{{/each}}
+			</select>
 		</div>
 		{{#each feedList}}
-		<div class="new-post-container">
+		<div class="new-post-container feed mood{{Feeling}} category{{CategoryId}}" data-description="{{Description}}" data-category-id="{{CategoryId}}" data-mood-id="{{Feeling}}">
 			<div class="new-post-header">
 				<img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
 				<label>
@@ -40,8 +32,8 @@
 				</label>
 			</div>
 			<div>
-				<h1>{{Title}}</h1>
-				<p>{{Description}}</p>
+				<h1 class="title">{{Title}}</h1>
+				<p class="description">{{Description}}</p>
 			</div>
 		</div>
 		{{/each}}
