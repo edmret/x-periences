@@ -33,7 +33,8 @@
   {{ >drawer }}
   <main class="mdl-layout__content">
     <div class="page-content">
-    	{{> cover_search }}
+        {{> cover_search }}
+    	{{> new-post }}
     	Lorem*20
     </div>
   </main>
@@ -41,42 +42,6 @@
 
 {{> scripts }}
 </body>
-
-<template name="header">
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Xperien.ce</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Enlace 1</a>
-        <a class="mdl-navigation__link" href="">Enlace 2</a>
-        <a class="mdl-navigation__link" href="">Enlace 3</a>
-        <a class="mdl-navigation__link" href="">{{> loginButtons}}</a>
-      </nav>
-    </div>
-  </header>
-</template>
-
-<template name="drawer">
-	<div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Barra lateral</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Enlace 1</a>
-      <a class="mdl-navigation__link" href="">Enlace 2</a>
-      <a class="mdl-navigation__link" href="">Enlace 3</a>
-      <a class="mdl-navigation__link" href="">Enlace 4</a>
-    </nav>
-  </div>
-</template>
-
-<template name="cover_search">
-	<div class="cover-search">
-		<input type="text" placeholder="¿Como te sientes hoy?">
-	</div>
-</template>
 
 <template name="scripts">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

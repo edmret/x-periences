@@ -1,0 +1,45 @@
+<template name="new_post">
+    <div class="mdl-layout">
+        <form action="" class="new-post-container">
+            <div class="new-post-header">
+                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
+                <label>
+                    <h4>Nueva Publicación</h4>
+                </label>
+
+            </div>
+            <div>
+              <div class="mdl-textfield mdl-js-textfield line">
+                <input class="mdl-textfield__input" type="text" id="sample1"/>
+                <label class="mdl-textfield__label" for="sample1">Título de tu experiencia</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield line">
+                <textarea class="mdl-textfield__input" type="text" id="sample1" rows="6"></textarea> 
+                <label class="mdl-textfield__label" for="sample1">Describe tu experiencia</label>
+              </div>
+            </div>
+            <div class="line-flex">
+                <select name="" id="">
+                    <option value="">Categoría</option>
+                    <option value="">Categoría</option>
+                    <option value="">Categoría</option>
+                </select>
+                <select name="" id="">
+                    <option value="">Sentimiento</option>
+                    <option value="">Sentimiento</option>
+                    <option value="">Sentimiento</option>
+                    <option value="">Sentimiento</option>
+                    <option value="">Sentimiento</option>
+                </select>
+            </div>
+            <div class="line-flex">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked/>
+                  <span class="mdl-checkbox__label">Publicar como anónimo</span>
+                </label>
+                <button class="mdl-button mdl-js-button mdl-button--raised">Publicar</button>       
+            </div>
+
+        </form>
+    </div>
+</template>
