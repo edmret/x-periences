@@ -1,9 +1,21 @@
 <template name="experience_resume">
     
-    <article class="article-preview">
-        <h3>{{Title}}</h3>
-        <p>{{Description}}</p>
-        <a href="/show/{{_id}}">Leer más</a>
-    </article>
+    <div class="new-post-container feed feeling-id-{{Feeling}}" data-description="{{Title}} {{Description}}" data-category-id="{{CategoryId}}" data-feeling-id="{{Feeling}}">
+			<div class="new-post-header">
+                <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background-image: url({{user.picture}});">
+                  <div class="mdl-card__title mdl-card--expand"></div>
+                  <div class="mdl-card__actions">
+                    <span class="demo-card-image__filename"></span>
+                  </div>
+                </div>
+				<label>
+                    <h4 class="feed-user">{{user.name}}</h4>
+				</label>
+			</div>
+			<div>
+				<a href="/show/{{_id}}"><h1 class="title">{{Title}}</h1></a>
+				<p class="description">{{Description}}</p>
+			</div>
+		</div>
     
 </template>

@@ -12,23 +12,12 @@
 			<select class="moods">
 				<option value="">Seleccionar sentimiento</option>
 				{{#each feelingList }}
-				<option value='{{enum}}' class="feeling-id-{{enum}}">{{name_es}}</option>
+				    <option value='{{enum}}' class="feeling-id-{{enum}}">{{name_es}}</option>
 				{{/each}}
 			</select>
 		</div>
 		{{#each feedList}}
-		<div class="new-post-container feed feeling-id-{{Feeling}}" data-description="{{Title}} {{Description}}" data-category-id="{{CategoryId}}" data-feeling-id="{{Feeling}}">
-			<div class="new-post-header">
-				<img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
-				<label>
-					<h4 class="feed-user" data-annonimous="{{asAnnonymous}}">{{UserId}}</h4>
-				</label>
-			</div>
-			<div>
-				<a href="show/{{_id}}"><h1 class="title">{{Title}}</h1></a>
-				<p class="description">{{Description}}</p>
-			</div>
-		</div>
+            {{ > experience_resume}}
 		{{/each}}
 		<div class="no-matches">
 			<h2>No se encontraron resultados! :(</h2>
