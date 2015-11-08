@@ -3,3 +3,12 @@
 	width: 80%;
 	margin: 0 auto;
 }
+.feeds-toolbar
+{
+	border: 0 !important;
+}
+
+*
+{
+	outline: 0;
+}
