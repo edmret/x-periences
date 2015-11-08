@@ -3,6 +3,10 @@
 	display: flex;
 	margin: 10px;
     box-sizing: border-box;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .profile-header-info
 {
@@ -65,4 +69,5 @@
 .badge p
 {
 	margin-bottom: 0px;
+    color: #333;
 }
