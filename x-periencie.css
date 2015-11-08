@@ -22,7 +22,7 @@
 
 .row
 {
-	
+
 }
 .line{
 	display: block !important;
@@ -74,6 +74,11 @@
 .mdl-layout__header-row .mdl-navigation__link,
 .mdl-layout__drawer-button{
 	color: #3F51B5 !important;
+}
+
+.menu-feels {
+	margin: 0 auto;
+	display: inline-block;
 }
 
 @keyframes imgzooming{
