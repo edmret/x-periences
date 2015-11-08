@@ -12,3 +12,34 @@ body, html{
 	background-image: url(https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg);
 	height: 200px;
 }
+.row
+{
+	
+}
+.line{
+	display: block !important;
+}
+.line-flex{
+	display: flex;
+}
+.new-post-header
+{
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.new-post-header img
+{
+	width: 80px;
+	margin-right: 15px;
+}
+.line.mdl-textfield {
+	width: auto !important;
+}
+.new-post-container
+{
+	width: 80%;
+	margin: 0 auto;
+	padding: 15px;
+	background-color: #FAFAFA;
+}
