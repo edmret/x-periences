@@ -13,12 +13,22 @@
 	display: block;
     width: 100%;
 }
+
+.profile-name{
+    font-size: 40px;
+}
+.profile-birth{
+    font-size: 24px;
+    display: block;
+}
+
 .profile-header-img
 {
 	margin-right: 15px;
 }
 .profile-social
 {
+    font-size: 28px;
 	display: flex;
 }
 .left-side
