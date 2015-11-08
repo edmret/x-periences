@@ -1,0 +1,68 @@
+<template name="profile">
+    <div class="post-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <div class="post-ribbon feeling-0"></div>
+      <main class="post-main mdl-layout__content">
+        <div class="post-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="profile-header mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col">
+                    <a href="/profile"><img src="{{profile.picture}}" alt="User Image"></a>
+                </div>
+                <div class="mdl-cell mdl-cell--8-col">
+                    <a class="profile-name" href="/profile">{{profile.name}}</a>
+                    <label class="profile-birth">{{profile.birthdate}}</label>
+                    <div class="profile-social">
+                        <a href=""><i class="fa fa-facebook-official fa-lg"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+<<<<<<< HEAD
+        </div>
+        <div class="profile-body">
+            <div class="left-side">
+                
+                {{#each experiences}}
+                    {{> experience_resume }}
+                {{/each}}
+            </div>
+            <div class="right-side">
+                <h3>{{profile.total_badges}} Badges</h3>
+                {{#if has_no_badges }}
+                    <div class="">
+                        Aún no tienes badges! :(
+                    </div>
+                {{/if}}
+                
+                {{#each profile.badges}}
+                   {{> badge }}
+                {{/each}}
+=======
+            <div class="show-bottom-bar mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col">
+                    {{#each experiences}}
+                        {{> experience_resume }}
+                    {{/each}}
+                </div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    <h3>42 Badges</h3>
+                    
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>First timer</p>
+                    </div>
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>You're liking it</p>
+                    </div>
+                </div>
+>>>>>>> 5a9c0da18843868ac31a1061abdb2ddb4e695591
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+</template>
