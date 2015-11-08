@@ -12,7 +12,7 @@ $(document).on("ready", function(){
     * The cover search element
     * @type {HTMLElement}
     */
-   var coverSearch = document.getElementById("cover-search");
+    var coverSearch = document.getElementById("cover-search");
     
     if(!!coverSearch ){
       coverSearch.addEventListener("animationiteration", changeBackgroundImage, false);
