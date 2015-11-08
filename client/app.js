@@ -9,22 +9,43 @@ var images = [
 Meteor.defer(function(){
     
     /**
+     * executes 
+     */
+    function checkComponentHandler(){
+        
+        console.log(typeof componentHandler);
+        
+        if(typeof componentHandler != "undefined"){
+            
+            setTimeout(function(){
+                componentHandler.upgradeDom();
+            },5);
+            
+        }else{
+            //update material design bindings
+            setTimeout(checkComponentHandler,5);
+        }
+    }
+    
+    checkComponentHandler();
+    
+});
+
+
+Template.cover_search.onRendered(function () {
+  /**
     * The cover search element
     * @type {HTMLElement}
     */
     var coverSearch = document.getElementById("cover-search");
     
     if(!!coverSearch ){
-      coverSearch.addEventListener("animationiteration", changeBackgroundImage, false);
-      coverSearch.addEventListener("MSAnimationIteration", changeBackgroundImage, false);
-      coverSearch.addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
+      setTimeout(function(){
+          coverSearch.addEventListener("animationiteration", changeBackgroundImage, false);
+          coverSearch.addEventListener("MSAnimationIteration", changeBackgroundImage, false);
+          coverSearch.addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
+      },1);
     }
-    
-    //update material design bindings
-    setTimeout(function(){
-        componentHandler.upgradeDom();
-    },1);
-    
 });
 
 function changeBackgroundImage(){
