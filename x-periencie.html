@@ -10,25 +10,72 @@
 
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <!-- Material design libraries -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Material design libraries -->
     <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    {{> loginButtons}}
-    {{> cover_page }}
-    {{> scripts }}
-    
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+<div class="mdl-layout mdl-js-layout">
+  {{ >header }}
+  {{ >drawer }}
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    	{{> cover_search }}
+    	Lorem*20
+    </div>
+  </main>
+</div>
 
+{{> scripts }}
 </body>
 
-<template name="cover_page">
-	<div class="cover">
-		<h1>Welcome to x-perience.</h1>
-	</div>
+<template name="header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Xperien.ce</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Enlace 1</a>
+        <a class="mdl-navigation__link" href="">Enlace 2</a>
+        <a class="mdl-navigation__link" href="">Enlace 3</a>
+        <a class="mdl-navigation__link" href="">{{> loginButtons}}</a>
+      </nav>
+    </div>
+  </header>
+</template>
 
+<template name="drawer">
+	<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Barra lateral</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Enlace 1</a>
+      <a class="mdl-navigation__link" href="">Enlace 2</a>
+      <a class="mdl-navigation__link" href="">Enlace 3</a>
+      <a class="mdl-navigation__link" href="">Enlace 4</a>
+    </nav>
+  </div>
+</template>
+
+<template name="cover_search">
+	<div class="cover-search">
+		<input type="text" placeholder="¿Como te sientes hoy?">
+	</div>
 </template>
 
 <template name="scripts">
