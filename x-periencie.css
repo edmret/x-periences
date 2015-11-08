@@ -5,13 +5,26 @@ body, html{
 
 .cover-search{
 	padding: 100px 0;
-	background: url('https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg') center / cover;
+	background-image: url('https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg');
+	background-size: 100%;
+	animation-name: imgzooming;
+	animation-duration: 7.5s;
+	animation-iteration-count: infinite;
+	background-position: top center;
 }
 
-.cover{
-	background-image: url(https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg);
-	height: 200px;
-}
+.cover-search input{
+	width: 80%;
+	display: block;
+	border-radius: 16px;
+	margin: 0 auto;
+	height: 64px;
+	border: 2px solid #CCC;
+	text-align: center;
+	font-size: 32px;
+	background-color: rgba(255,255,255,0.87);
+ }
+
 .row
 {
 	
@@ -42,4 +55,20 @@ body, html{
 	margin: 0 auto;
 	padding: 15px;
 	background-color: #FAFAFA;
+}
+
+.mdl-layout__header{
+	background-color: rgba(255,255,255,0.87) !important;
+	color: #3F51B5 !important;
+}
+
+.mdl-layout__header-row .mdl-navigation__link,
+.mdl-layout__drawer-button{
+	color: #3F51B5 !important;
+}
+
+@keyframes imgzooming{
+	to{
+		background-position: bottom center;
+	}
 }
