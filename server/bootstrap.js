@@ -21,7 +21,7 @@ Meteor.startup(function() {
     Feelings.insert({name_es: "Tristeza", name: "Sadness", enum: 4});
     Feelings.insert({name_es: "Sorpresa", name: "Surprise", enum: 5});
     Feelings.insert({name_es: "Miedo", name: "Fear", enum: 6});
-    Feelings.insert({name_es: "Confianza", name: "Trust", enum: 7}); 
+    Feelings.insert({name_es: "Confianza", name: "Trust", enum: 7});
   }
 });
 
@@ -32,10 +32,10 @@ Meteor.startup(function() {
 * @param {object} user the user object object
 */
 Accounts.onCreateUser(function(options, user) {
-    
+
     // the final profile picture
     var profilePicture = 'images/defaultprofile.png';
-    
+
     //check for the login services (current)
     if(!!user.services){
         if(!!user.services.facebook){
@@ -44,14 +44,14 @@ Accounts.onCreateUser(function(options, user) {
             profilePicture = services.twitter.profile_image_url;
         }
     }
-    
+
     //sets the profile default picture
     options.profile.picture = profilePicture;
-    
+
     //set the birthday
     options.profile.birthdate = '1900/01/01';
-    
-    
+
+
     user.profile = options.profile;
     return user;
 });
