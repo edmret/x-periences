@@ -5,27 +5,33 @@
 	<div class="feeds">
 		<div class="feeds-toolbar">
 			<!--[BUSCADOR]-->
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-				<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
-					<i class="material-icons">search</i>
-				</label>
-				<div class="mdl-textfield__expandable-holder">
-					<input class="mdl-textfield__input" type="text" id="sample6">
-					<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
-				</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="sample1">
+				<label class="mdl-textfield__label" for="sample1">Buscar</label>
 			</div>
 			<!--[/BUSCADOR]-->
 			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="clasifications">
 				<i class="material-icons">class</i>
 			</button>
 			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="clasifications">
-				<li class="mdl-menu__item"></li>
+				<li class="mdl-menu__item">Clasificación 1</li>
+				<li class="mdl-menu__item">Clasificación 2</li>
+				<li class="mdl-menu__item">Clasificación 3</li>
+				<li class="mdl-menu__item">Clasificación 4</li>
+				<li class="mdl-menu__item">Clasificación 5</li>
 			</ul>
-			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="moods">
 				<i class="material-icons">mood</i>
 			</button>
+			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="moods">
+				<li class="mdl-menu__item">Sentimiento 1</li>
+				<li class="mdl-menu__item">Clasificación 2</li>
+				<li class="mdl-menu__item">Clasificación 3</li>
+				<li class="mdl-menu__item">Clasificación 4</li>
+				<li class="mdl-menu__item">Clasificación 5</li>
+			</ul>
 		</div>
-        <form action="#" class="new-post-container">
+        <div class="new-post-container">
             <div class="new-post-header">
                 <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
                 <label>
@@ -33,15 +39,33 @@
                 </label>
             </div>
             <div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <input class="mdl-textfield__input" type="text" id="title_1"/>
-                <label class="mdl-textfield__label" for="title_1">Título de tu experiencia</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <textarea class="mdl-textfield__input" type="text" id="post_1" rows="6"></textarea> 
-                <label class="mdl-textfield__label" for="post_1">Describe tu experiencia</label>
-              </div>
+              <h1>Título de tu experiencia</h1>
+              <p>Describe tu experiencia</p>
             </div>
-        </form>
+        </div>
+        <div class="new-post-container">
+            <div class="new-post-header">
+                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
+                <label>
+                    <h4>Nombre Usuario</h4>
+                </label>
+            </div>
+            <div>
+              <h1>Título de tu experiencia</h1>
+              <p>Describe tu experiencia</p>
+            </div>
+        </div>
+        <div class="new-post-container">
+            <div class="new-post-header">
+                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
+                <label>
+                    <h4>Nombre Usuario</h4>
+                </label>
+            </div>
+            <div>
+              <h1>Título de tu experiencia</h1>
+              <p>Describe tu experiencia</p>
+            </div>
+        </div>
 	</div>
 </template>
