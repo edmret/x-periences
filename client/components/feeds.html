@@ -4,19 +4,23 @@
 	{{ > cover_search}}
 	<div class="feeds">
 		<div class="feeds-toolbar">
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-				<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-					<i class="material-icons">search</i>
-				</label>
-				<div class="mdl-textfield__expandable-holder">
-					<input class="mdl-textfield__input" type="text" id="search">
-					<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+			<!--[BUSCADOR]-->
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+						<i class="material-icons">search</i>
+					</label>
+					<div class="mdl-textfield__expandable-holder">
+						<input class="mdl-textfield__input" type="text" id="search">
+						<label class="mdl-textfield__label" for="sample-expandable"></label>
+					</div>
 				</div>
-			</div>
-			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+			</form>
+			<!--[/BUSCADOR]-->
+			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="clasifications">
 				<i class="material-icons">class</i>
 			</button>
-			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-top-left">
+			<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="clasifications">
 				<li class="mdl-menu__item"></li>
 			</ul>
 			<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -27,17 +31,17 @@
             <div class="new-post-header">
                 <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
                 <label>
-                    <h4>Titulo Experiencia</h4>
+                    <h4>Nombre Usuario</h4>
                 </label>
             </div>
             <div>
               <div class="mdl-textfield mdl-js-textfield line">
-                <input class="mdl-textfield__input" type="text" id="sample1"/>
-                <label class="mdl-textfield__label" for="sample1">Título de tu experiencia</label>
+                <input class="mdl-textfield__input" type="text" id="title_1"/>
+                <label class="mdl-textfield__label" for="title_1">Título de tu experiencia</label>
               </div>
               <div class="mdl-textfield mdl-js-textfield line">
-                <textarea class="mdl-textfield__input" type="text" id="sample1" rows="6"></textarea> 
-                <label class="mdl-textfield__label" for="sample1">Describe tu experiencia</label>
+                <textarea class="mdl-textfield__input" type="text" id="post_1" rows="6"></textarea> 
+                <label class="mdl-textfield__label" for="post_1">Describe tu experiencia</label>
               </div>
             </div>
         </form>
