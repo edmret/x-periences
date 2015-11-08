@@ -23,6 +23,68 @@ Meteor.startup(function() {
     Feelings.insert({name_es: "Miedo", name: "Fear", enum: 6});
     Feelings.insert({name_es: "Confianza", name: "Trust", enum: 7});
   }
+    
+
+  //Feeling collection initialization
+  if(typeof Badges.findOne() === 'undefined') {
+    Badges.insert({
+        Name: "¡Tu primer hijo!",
+        Description: "¡Has creado tu primer experiencia :)!",
+        ShortHand: "first-child",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "¡Crea tu primer nota!",
+        reach: {
+            post: 1
+        }
+    },{
+        Name: "Como tu primera vez",
+        Description: "¡Han votado tu nota positivamente por primera vez!",
+        ShortHand: "first-time",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "¡Recive un punto positivo en una experiencia!",
+        reach: {
+            liked: 1
+        }
+    },{
+        Name: "!Como un puberto¡",
+        Description: "¡empiezas a acumular experiencias, la gente aprende mucho de tí!",
+        ShortHand: "puberty",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "¡escribe 10 experiencias!",
+        reach: {
+            post: 10
+        }
+    },{
+        Name: "!Toxido Mask¡",
+        Description: "¡Quieres ser tan popular como toxido Mask!",
+        ShortHand: "toxydo",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "¡Recive 10 votos positivos!",
+        reach: {
+            liked: 10
+        }
+    },{
+        Name: "!Padawan¡",
+        Description: "te encanta aprender de los demás vas por buen camino!",
+        ShortHand: "padawan",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "Vota 10 experiencias, aprende de ellos :)",
+        reach: {
+            voted: 10
+        }
+    },{
+        Name: "Jedi Master",
+        Description: "¡Maestro, la fuerza es tu aliada, la experiencia te es agraciada!",
+        ShortHand: "padawan",
+        ImageUrl: "http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png",
+        instructions: "Comparte 100 experiencias",
+        reach: {
+            post: 100
+        }
+    });
+  }
+    
+    
 });
 
 
@@ -41,7 +103,7 @@ Accounts.onCreateUser(function(options, user) {
         if(!!user.services.facebook){
             profilePicture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
         }else if( !!user.services.twitter ){
-            profilePicture = services.twitter.profile_image_url;
+            profilePicture = user.services.twitter.profile_image_url;
         }
     }
 

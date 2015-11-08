@@ -17,23 +17,14 @@
         </div>
         <div class="profile-body">
             <div class="left-side">
-                <div class="article-preview">
-                    <h3>A Complete Guide to Flexbox</h3>
-                    <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
-                    <a href="">Leer más</a>
-                </div>
-                <div class="article-preview">
-                    <h3>A Complete Guide to Flexbox</h3>
-                    <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
-                    <a href="">Leer más</a>
-                </div>
+                
+                {{#each experiences}}
+                    {{> experience_resume }}
+                {{/each}}
             </div>
             <div class="right-side">
                 <h3>42 Badges</h3>
-                <div class="badge">
-                    <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                    <p>Welcome to experience</p>
-                </div>
+                
                 <div class="badge">
                     <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
                     <p>First timer</p>
