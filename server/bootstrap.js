@@ -24,6 +24,22 @@ Meteor.startup(function() {
     Feelings.insert({name_es: "Confianza", name: "Trust", enum: 7});
   }
     
+    
+
+    //try to allow update data
+   Meteor.users.allow({
+       update: function (userId, doc, fieldNames, modifier) {
+    
+           
+          if( userId === Meteor.UserId() && 
+             fieldNames.indexOf('_id') == -1
+          ) {
+              return true;
+          }
+           
+       }
+   });
+    
 
   //Feeling collection initialization
   if(typeof Badges.findOne() === 'undefined') {
@@ -36,7 +52,8 @@ Meteor.startup(function() {
         reach: {
             post: 1
         }
-    },{
+    });
+    Badges.insert({
         Name: "Como tu primera vez",
         Description: "¡Han votado tu nota positivamente por primera vez!",
         ShortHand: "first-time",
@@ -45,7 +62,8 @@ Meteor.startup(function() {
         reach: {
             liked: 1
         }
-    },{
+    });
+    Badges.insert({
         Name: "!Como un puberto¡",
         Description: "¡empiezas a acumular experiencias, la gente aprende mucho de tí!",
         ShortHand: "puberty",
@@ -54,7 +72,8 @@ Meteor.startup(function() {
         reach: {
             post: 10
         }
-    },{
+    });
+    Badges.insert({
         Name: "!Toxido Mask¡",
         Description: "¡Quieres ser tan popular como toxido Mask!",
         ShortHand: "toxydo",
@@ -63,7 +82,8 @@ Meteor.startup(function() {
         reach: {
             liked: 10
         }
-    },{
+    });
+      Badges.insert({
         Name: "!Padawan¡",
         Description: "te encanta aprender de los demás vas por buen camino!",
         ShortHand: "padawan",
@@ -72,7 +92,8 @@ Meteor.startup(function() {
         reach: {
             voted: 10
         }
-    },{
+    });
+      Badges.insert({
         Name: "Jedi Master",
         Description: "¡Maestro, la fuerza es tu aliada, la experiencia te es agraciada!",
         ShortHand: "padawan",
@@ -86,6 +107,7 @@ Meteor.startup(function() {
     
     
 });
+
 
 
 /**
@@ -106,12 +128,32 @@ Accounts.onCreateUser(function(options, user) {
             profilePicture = user.services.twitter.profile_image_url;
         }
     }
-
-    //sets the profile default picture
-    options.profile.picture = profilePicture;
-
-    //set the birthday
-    options.profile.birthdate = '1900/01/01';
+    
+    
+    /**
+    * generates the extra data For users
+    */
+    var userID = UsersXP.insert({
+        user_id: user._id,
+        //sets the profile default picture
+        picture : profilePicture,
+        //set the birthday
+        birthdate : '1900/01/01',
+        //the empty badges spaces
+        badges: [],
+        
+        //the total of badges
+        total_badges: 0
+    });
+    
+    //share IDS between them
+    
+    _.extend(options.profile,{
+        extraDataId: userID
+    });
+    
+    
+    
 
 
     user.profile = options.profile;

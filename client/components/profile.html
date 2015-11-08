@@ -23,16 +23,16 @@
                 {{/each}}
             </div>
             <div class="right-side">
-                <h3>42 Badges</h3>
+                <h3>{{profile.total_badges}} Badges</h3>
+                {{#if has_no_badges }}
+                    <div class="">
+                        Aún no tienes badges! :(
+                    </div>
+                {{/if}}
                 
-                <div class="badge">
-                    <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                    <p>First timer</p>
-                </div>
-                <div class="badge">
-                    <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                    <p>You're liking it</p>
-                </div>
+                {{#each profile.badges}}
+                   {{> badge }}
+                {{/each}}
             </div>
         </div>
     </div>
