@@ -3,7 +3,6 @@
 .feeds-toolbar{
 	width:80%;
 	margin:0 auto;
-	border:1px solid red;
 }
 
 .feeds{
@@ -13,4 +12,8 @@
 }
 
 .feeds-content{
+}
+
+.feed{
+	margin-top:10px;
 }
