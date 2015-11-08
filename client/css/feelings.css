@@ -2,29 +2,37 @@
 {
   margin-bottom: 5px;
 }
-.feel-Fear {
-  background-color: #4CAF50 !important;
-}
-.feel-Trust {
-  background-color: #CDDC39 !important;
-  color: #424242 !important;
-}
+.feeling-0,
 .feel-Joy {
   background-color: #FFEB3B !important;
   color: #424242 !important;
 }
+.feeling-1,
 .feel-Anticipation {
   background-color: #FF9800 !important;
 }
+.feeling-2,
 .feel-Anger {
   background-color: #FF5722 !important;
 }
+.feeling-3,
 .feel-Disgust {
   background-color: #9C27B0 !important;
 }
+.feeling-4,
 .feel-Sadness {
   background-color: #3F51B5 !important;
 }
+.feeling-5,
 .feel-Surprise {
   background-color: #03A9F4 !important;
+}
+.feeling-6,
+.feel-Fear {
+  background-color: #4CAF50 !important;
+}
+.feeling-7,
+.feel-Trust {
+  background-color: #CDDC39 !important;
+  color: #424242 !important;
 }
