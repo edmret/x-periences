@@ -1,5 +1,17 @@
 /**/
 
 $(function(){
-	// alert("prueba");
+	
 });
+
+function Feeds(){
+	
+}
+
+function Favorite(){
+	
+}
+
+function Response(){
+	
+}

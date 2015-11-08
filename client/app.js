@@ -7,9 +7,18 @@ var images = [
 ];
 
 $(document).on("ready", function(){
-  document.getElementById("cover-search").addEventListener("animationiteration", changeBackgroundImage, false);
-  document.getElementById("cover-search").addEventListener("MSAnimationIteration", changeBackgroundImage, false);
-  document.getElementById("cover-search").addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
+    
+    /**
+    * The cover search element
+    * @type {HTMLElement}
+    */
+   var coverSearch = document.getElementById("cover-search");
+    
+    if(!!coverSearch ){
+      coverSearch.addEventListener("animationiteration", changeBackgroundImage, false);
+      coverSearch.addEventListener("MSAnimationIteration", changeBackgroundImage, false);
+      coverSearch.addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
+    }
 });
 
 function changeBackgroundImage(){
