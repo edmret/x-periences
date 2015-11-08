@@ -24,7 +24,7 @@
 }
 .new-post-container
 {
-	width: 80%;
+	width: 100% !important;
 	margin: 0 auto;
 	padding: 15px;
 	background-color: #FAFAFA;
