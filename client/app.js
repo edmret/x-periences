@@ -7,6 +7,8 @@ var images = [
   "http://i.huffpost.com/gen/2565944/images/o-PERSON-PHONE-SHOCKED-facebook.jpg"
 ];
 
+var words = [ "Investiga", "Enterate", "Conoce", "Aprende", "Descubre" ];
+
 
 
 /**
@@ -53,10 +55,12 @@ Template.cover_search.onRendered(function () {
           coverSearch.addEventListener("webkitAnimationIteration", changeBackgroundImage, false);
       },1);
     }
+    $("#search-field").focus();
 });
 
 function changeBackgroundImage(){
   ( currentImage === images.length - 1 ) ? (currentImage = 0) : currentImage++;
   $("#cover-search").css("background-image", "url("+images[currentImage]+")");
+  $("#search-field").attr("placeholder", words[currentImage]);
 }
 
