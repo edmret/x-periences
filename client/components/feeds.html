@@ -3,18 +3,20 @@
 	{{ > cover_search}}
 	<div class="feeds">
 		<div class="feeds-toolbar">
-			<select class="categories">
+			<select class="categories form-control">
 				<option value="">Seleccionar categoria</option>
 				{{#each categoryList }}
 				<option value='{{ _id }}'>{{name}}</option>
 				{{/each}}
 			</select>
-			<select class="moods">
-				<option value="">Seleccionar sentimiento</option>
-				{{#each feelingList }}
+		</div>
+		<div class="line-flex">
+			<div class="menu-feels">
+				{{#each feelingList}}
 				    <option value='{{enum}}' class="feeling-id-{{enum}}">{{name_es}}</option>
 				{{/each}}
-			</select>
+					<span data-enum class="mdl-button mdl-js-button mdl-button--raised exp_feel mdl-js-ripple-effect">Ninguno</span>
+			</div>
 		</div>
 		{{#each feedList}}
             {{ > experience_resume}}
