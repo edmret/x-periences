@@ -15,5 +15,10 @@
 }
 
 .feed{
-	margin-top:10px;
+	margin-top:10px !important;
+}
+
+.feed h1
+{
+	color: #000;
 }
