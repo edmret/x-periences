@@ -1,11 +1,11 @@
 body, html{
 	padding: 0;
 	margin: 0;
-	font-size: Helvetica, Arial, Calibri;
 }
 
-*{
-	vertical-align: top;
+.cover-search{
+	padding: 100px 0;
+	background: url('https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg') center / cover;
 }
 
 .cover{

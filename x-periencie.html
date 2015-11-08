@@ -16,64 +16,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Material design libraries -->
     <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    {{> loginButtons}}
-    {{> cover_page }}
-    {{> scripts }}
-    
-
-</body>
-
-<template name="cover_page">
-    <div class="mdl-layout">
-        <form action="" class="new-post-container">
-            <div class="new-post-header">
-                <img src="http://www.topmanzana.com/static/secret.jpeg" alt="User Image">
-                <label>
-                    <h4>Nueva Publicación</h4>
-                </label>
-
-            </div>
-            <div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <input class="mdl-textfield__input" type="text" id="sample1"/>
-                <label class="mdl-textfield__label" for="sample1">Título de tu experiencia</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield line">
-                <textarea class="mdl-textfield__input" type="text" id="sample1" rows="6"></textarea> 
-                <label class="mdl-textfield__label" for="sample1">Describe tu experiencia</label>
-              </div>
-            </div>
-            <div class="line-flex">
-                <select name="" id="">
-                    <option value="">Categoría</option>
-                    <option value="">Categoría</option>
-                    <option value="">Categoría</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Sentimiento</option>
-                    <option value="">Sentimiento</option>
-                    <option value="">Sentimiento</option>
-                    <option value="">Sentimiento</option>
-                    <option value="">Sentimiento</option>
-                </select>
-            </div>
-            <div class="line-flex">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked/>
-                  <span class="mdl-checkbox__label">Publicar como anónimo</span>
-                </label>
-                <button class="mdl-button mdl-js-button mdl-button--raised">Publicar</button>       
-            </div>
-
-        </form>
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+<div class="mdl-layout mdl-js-layout">
+  {{ >header }}
+  {{ >drawer }}
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        {{> cover_search }}
+    	{{> new-post }}
+    	Lorem*20
     </div>
-</template>
+  </main>
+</div>
+
+{{> scripts }}
+</body>
 
 <template name="scripts">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
