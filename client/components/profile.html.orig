@@ -20,13 +20,16 @@
                     </div>
                 </div>
             </div>
-            <div class="show-bottom-bar mdl-grid">
-                <div class="mdl-cell mdl-cell--9-col">
-                    {{#each experiences}}
-                        {{> experience_resume }}
-                    {{/each}}
-                </div>
-                <div class="mdl-cell mdl-cell--3-col">
+<<<<<<< HEAD
+        </div>
+        <div class="profile-body">
+            <div class="left-side">
+                
+                {{#each experiences}}
+                    {{> experience_resume }}
+                {{/each}}
+            </div>
+            <div class="right-side">
                 <h3>{{profile.total_badges}} Badges</h3>
                 {{#if has_no_badges }}
                     <div class="">
@@ -37,7 +40,26 @@
                 {{#each profile.badges}}
                    {{> badge }}
                 {{/each}}
+=======
+            <div class="show-bottom-bar mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col">
+                    {{#each experiences}}
+                        {{> experience_resume }}
+                    {{/each}}
                 </div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    <h3>42 Badges</h3>
+                    
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>First timer</p>
+                    </div>
+                    <div class="badge">
+                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
+                        <p>You're liking it</p>
+                    </div>
+                </div>
+>>>>>>> 5a9c0da18843868ac31a1061abdb2ddb4e695591
             </div>
           </div>
         </div>
