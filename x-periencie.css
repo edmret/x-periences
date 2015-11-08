@@ -1,8 +1,3 @@
-body, html{
-	padding: 0;
-	margin: 0;
-}
-
 .cover-search{
 	padding: 100px 0;
 	background-image: url('https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg');
@@ -25,6 +20,55 @@ body, html{
 	background-color: rgba(255,255,255,0.87);
  }
 
+<<<<<<< Updated upstream
+=======
+.row
+{
+	
+}
+.line{
+	display: block !important;
+}
+.line-flex{
+	display: flex;
+}
+.new-post-header,
+.show-post-header
+{
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.new-post-header img
+{
+	width: 80px;
+	margin-right: 15px;
+}
+.line.mdl-textfield {
+	width: auto !important;
+}
+.new-post-container
+{
+	width: 80%;
+	margin: 0 auto;
+	padding: 15px;
+	background-color: #FAFAFA;
+}
+.show-post-header{
+	line-height: 80px;
+}
+.show-post-header a{
+	font-size: 18px;
+}
+.show-post-header img{
+	font-size: 20px;
+	width: 80px;
+}
+.show-bottom-bar{
+	line-height: 32px;
+}
+
+>>>>>>> Stashed changes
 .mdl-layout__header{
 	background-color: rgba(255,255,255,0.87) !important;
 	color: #3F51B5 !important;
@@ -40,3 +84,24 @@ body, html{
 		background-position: bottom center;
 	}
 }
+
+.post-ribbon{
+	background-color: #3F51B5;
+	flex-shrink: 0;
+	width: 100%;
+	height: 40vh;
+}
+
+.post-main{
+	margin-top: -35vh;
+	flex-shrink: 0;
+}
+
+.post-content{
+	padding: 80px 56px;
+	margin-bottom: 80px;
+}
+
+.al{ text-align: left; }
+.ac{ text-align: center; }
+.ar{ text-align: right; }
