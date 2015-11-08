@@ -51,13 +51,6 @@
 .line.mdl-textfield {
 	width: auto !important;
 }
-.new-post-container
-{
-	width: 80%;
-	margin: 0 auto;
-	padding: 15px;
-	background-color: #FAFAFA;
-}
 .show-post-header{
 	line-height: 80px;
 }
