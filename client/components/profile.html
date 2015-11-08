@@ -27,16 +27,16 @@
                     {{/each}}
                 </div>
                 <div class="mdl-cell mdl-cell--3-col">
-                    <h3>42 Badges</h3>
-                    
-                    <div class="badge">
-                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                        <p>First timer</p>
+                <h3>{{profile.total_badges}} Badges</h3>
+                {{#if has_no_badges }}
+                    <div class="">
+                        Aún no tienes badges! :(
                     </div>
-                    <div class="badge">
-                        <img src="http://images.clipartpanda.com/police-officer-badge-clipart-clipart-fancy-badge-256x256-561e.png" alt="">
-                        <p>You're liking it</p>
-                    </div>
+                {{/if}}
+                
+                {{#each profile.badges}}
+                   {{> badge }}
+                {{/each}}
                 </div>
             </div>
           </div>

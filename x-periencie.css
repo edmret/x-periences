@@ -1,9 +1,9 @@
 .cover-search{
-	padding: 100px 0;
-	background-image: url('https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg');
-	background-size: 100%;
+	padding: 150px 0;
+	background-image: url('http://i.huffpost.com/gen/1790980/images/o-HAPPY-WOMAN-facebook');
+	background-size: 100% cover;
 	animation-name: imgzooming;
-	animation-duration: 7.5s;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	background-position: top center;
 }
@@ -18,7 +18,13 @@
 	text-align: center;
 	font-size: 32px;
 	background-color: rgba(255,255,255,0.87);
+    line-height: 1em;
  }
+
+.logo{
+	height: 100%;
+	width: auto;
+}
 
 .row
 {

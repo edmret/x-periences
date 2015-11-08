@@ -1,14 +1,10 @@
-.feeds-toolbar
-{
+.feeds-toolbar{
 	margin:10px 0 0 0;
 }
-
 .feed-hidden{
 	display:none;
 }
-
-.no-matches
-{
+.no-matches{
 	display:none;
 	width: 80%;
 	margin: 0 auto;

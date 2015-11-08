@@ -1,9 +1,10 @@
 var currentImage = 0;
 var images = [
-  "https://as.ftcdn.net/r/v1/pics/b1544fcf65d1b929bcb6bb8f377207dbfa3804a8/home/1555/couple.jpg",
-  "http://www.lifeofpix.com/wp-content/uploads/2015/11/Life-of-Pix-free-stock-photos-sea-boats-landscape-AidaSadzak.jpg",
-  "http://www.lifeofpix.com/wp-content/uploads/2015/11/Life-of-Pix-free-stock-photos-city-view-church-AidaSadzak.jpg",
-  "http://www.lifeofpix.com/wp-content/uploads/2015/11/Life-of-Pix-free-stock-photos-river-forest-sunset-AidaSadzak.jpg"
+  "https://kevinonkars.files.wordpress.com/2012/05/anger-management2.jpg",
+  "http://i50mas.com/wp-content/uploads/2015/09/criticascuidador1.jpg",
+  "http://i.huffpost.com/gen/2455818/images/o-HAPPY-WOMAN-facebook.jpg",
+  "http://i.huffpost.com/gen/2551372/images/o-FRUSTRATED-WOMAN-facebook.jpg",
+  "http://i.huffpost.com/gen/2565944/images/o-PERSON-PHONE-SHOCKED-facebook.jpg"
 ];
 
 

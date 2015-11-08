@@ -2,37 +2,79 @@
 {
   margin-bottom: 5px;
 }
-.feeling-0,
 .feel-Joy {
   background-color: #FFEB3B !important;
   color: #424242 !important;
 }
-.feeling-1,
 .feel-Anticipation {
   background-color: #FF9800 !important;
 }
-.feeling-2,
 .feel-Anger {
   background-color: #FF5722 !important;
 }
-.feeling-3,
 .feel-Disgust {
   background-color: #9C27B0 !important;
 }
-.feeling-4,
 .feel-Sadness {
   background-color: #3F51B5 !important;
 }
-.feeling-5,
 .feel-Surprise {
   background-color: #03A9F4 !important;
 }
-.feeling-6,
 .feel-Fear {
   background-color: #4CAF50 !important;
 }
-.feeling-7,
 .feel-Trust {
   background-color: #CDDC39 !important;
-  color: #424242 !important;
+  /*color: #424242 !important;*/
+}
+.feeling-id-0
+{
+  color: #000;
+  background-color: #FFF59D !important;
+  /*background-color: #FFF176 !important;*/
+  /*color: #424242 !important;*/
+}
+.feeling-id-1
+{
+  color: #000;
+  background-color: #FFCC80 !important;
+  /*background-color: #FFB74D !important;*/
+}
+.feeling-id-2
+{
+  color: #000;
+  background-color: #FFAB91 !important;
+  /*background-color: #FF8A65 !important;*/
+}
+.feeling-id-3
+{
+  color: #000;
+  background-color: #CE93D8 !important;
+  /*background-color: #BA68C8 !important;*/
+}
+.feeling-id-4
+{
+  color: #000;
+  background-color: #9FA8DA !important;
+  /*background-color: #7986CB !important;*/
+}
+.feeling-id-5
+{
+  color: #000;
+  background-color: #81D4FA !important;
+  /*background-color: #4FC3F7 !important;*/
+}
+.feeling-id-6
+{
+  color: #000;
+  /*background-color: #A5D6A7 !important;*/
+  background-color: #81C784 !important;
+}
+.feeling-id-7
+{
+  color: #000;
+  /*background-color: #E6EE9C !important;*/
+  background-color: #DCE775 !important;
+  /*color: #424242 !important;*/
 }

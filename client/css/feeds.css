@@ -15,5 +15,9 @@
 }
 
 .feed{
-	margin-top:10px;
+}
+
+.feed h1
+{
+	color: #000;
 }
