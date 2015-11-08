@@ -3,13 +3,13 @@
 	{{ > cover_search}}
 	<div class="feeds">
 		<div class="feeds-toolbar">
-			<select class="categories">
+			<select class="categories form-control">
 				<option value="">Seleccionar categoria</option>
 				{{#each categoryList }}
 				<option value='{{ _id }}'>{{name}}</option>
 				{{/each}}
 			</select>
-			<select class="moods">
+			<select class="moods form-control">
 				<option value="">Seleccionar sentimiento</option>
 				{{#each feelingList }}
 				<option value='{{enum}}' class="feeling-id-{{enum}}">{{name_es}}</option>

@@ -5,7 +5,10 @@
 }
 .feeds-toolbar
 {
-	border: 0 !important;
+	display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 5px auto !important;
 }
 
 *
@@ -16,4 +19,10 @@
 .fa-lg
 {
 	margin-left: 10px;
+}
+
+select.categories, select.moods
+{
+	width: 50%;
+	display: flex;
 }
