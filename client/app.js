@@ -4,7 +4,6 @@ var images = [
   "http://i50mas.com/wp-content/uploads/2015/09/criticascuidador1.jpg",
   "http://i.huffpost.com/gen/2455818/images/o-HAPPY-WOMAN-facebook.jpg",
   "http://i.huffpost.com/gen/2551372/images/o-FRUSTRATED-WOMAN-facebook.jpg",
-  // "http://i.huffpost.com/gen/1790980/images/o-SCARED-WOMAN-facebook.jpg",
   "http://i.huffpost.com/gen/2565944/images/o-PERSON-PHONE-SHOCKED-facebook.jpg"
 ];
 
